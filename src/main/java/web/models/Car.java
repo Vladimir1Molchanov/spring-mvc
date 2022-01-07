@@ -17,7 +17,7 @@ public class Car {
     @Override
     public String toString() {
         return "Car_id -> [" + id
-                + "] Car_model -> [" + model
-                + "] Car_series -> [" + series +"]";
+                + "] | Car_model -> [" + model
+                + "] | Car_series -> [" + series +"]";
     }
 }
