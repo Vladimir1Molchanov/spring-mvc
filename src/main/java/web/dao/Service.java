@@ -1,14 +1,14 @@
 package web.dao;
 
-import org.springframework.ui.Model;    
+import org.springframework.ui.Model;
 import web.models.Car;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Service {
+public class Service implements CarService {
 
-    public static List<Car> addCars() {
+    public List<Car> addCars() {
         List<Car> c = new ArrayList<>();
 
         c.add(new Car("model1", 1));
@@ -20,7 +20,7 @@ public class Service {
         return c;
     }
 
-    public static String printCarsList(Integer count, Model model, List<Car> c) {
+    public String printCarsList(Integer count, Model model, List<Car> c) {
         if (count == null) {
             model.addAttribute("carCount", c);
         } else {
