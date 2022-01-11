@@ -20,7 +20,7 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public String printCarsList(Integer count, Model model) {
-        if (count == null) {
+        if (count == null || count > 5) {
             model.addAttribute("carCount", crb.getCars());
         } else {
             List<Car> auto = new ArrayList<>();
