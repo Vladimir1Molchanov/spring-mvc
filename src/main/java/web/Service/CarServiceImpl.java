@@ -14,11 +14,11 @@ public class CarServiceImpl implements CarService {
     @Override
     public String printCarsList(Integer count, Model model, List<Car> c) {
         if (count == null) {
-            model.addAttribute("carCount", crb.carList());
+            model.addAttribute("carCount", crb.getCars());
         } else {
             List<Car> auto = new ArrayList<>();
             for (int i = 0; i < count; i++) {
-                auto.add(crb.carList().get(i));
+                auto.add(crb.getCars().get(i));
             }
             model.addAttribute("carCount", auto);
         }
