@@ -6,8 +6,5 @@ import web.models.Car;
 import java.util.List;
 
 public interface CarDao {
-    List<Car> addCars();
-
-    String printCarsList(Integer count, Model model, List<Car> c);
-
+List<Car> carList();
     }

@@ -5,16 +5,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import web.Service.CarService;
-import web.Service.CarServiceBody;
-import web.dao.CarDao;
-import web.dao.CarDaoBody;
+import web.Service.CarServiceImpl;
 import web.models.Car;
 
 import java.util.List;
 
 @Controller
 public class CarController {
-    CarService cs = new CarServiceBody();
+    CarService cs = new CarServiceImpl();
     List<Car> c = cs.addCars();
 
     @GetMapping(value = "/cars")
