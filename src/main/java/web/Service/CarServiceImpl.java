@@ -4,13 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import web.dao.CarDao;
-import web.dao.CarDaoImpl;
 import web.models.Car;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Service("carServiceImpl")
+@Service
 public class CarServiceImpl implements CarService {
     private final CarDao crb;
 
